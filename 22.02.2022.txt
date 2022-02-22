@@ -1,0 +1,208 @@
+
+гк@PC12-CAB3 MINGW64 ~
+$ cd D:\гк\IDEA projects\Runn 22.02.2022
+bash: cd: too many arguments
+
+гк@PC12-CAB3 MINGW64 ~
+$ cd "D:\гк\IDEA projects\Runn 22.02.2022"
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022
+$ pwd
+/d/гк/IDEA projects/Runn 22.02.2022
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022
+$ git init
+Initialized empty Git repository in D:/гк/IDEA projects/Runn 22.02.2022/.git/
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git add src
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git commit -m "Github_swing"
+[master (root-commit) 5c0d019] Github_swing
+ 1 file changed, 131 insertions(+)
+ create mode 100644 src/RunAll.java
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git config --global user.name
+zhenyka9696
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git remote set url https://zhenyka9696/Classwork_22.02.2022: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error: Unknown subcommand: set
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ ^C
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git remote set-url https://zhenyka9696/Classwork_22.02.2022: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
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git remote add origin https://zhenyka9696/Classwork_22.02.2022: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
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git remote -v
+origin  https://zhenyka9696/Classwork_22.02.2022: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 (fetch)
+origin  https://zhenyka9696/Classwork_22.02.2022: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 (push)
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git push -u
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$  git push --set-upstream origin master
+fatal: unable to access 'https://zhenyka9696/Classwork_22.02.2022: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/': Could not resolve host: zhenyka9696
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git config crdential.helper
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$  git push --set-upstream origin master
+fatal: unable to access 'https://zhenyka9696/Classwork_22.02.2022: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/': Could not resolve host: zhenyka9696
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$  git push --set-upstream origin fetch
+error: src refspec fetch does not match any
+error: failed to push some refs to 'https://zhenyka9696/Classwork_22.02.2022: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'
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git config crdential.helper
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$  git push --set-upstream origin master
+fatal: unable to access 'https://zhenyka9696/Classwork_22.02.2022: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/': Could not resolve host: zhenyka9696
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$  git push --set-upstream origin master
+fatal: unable to access 'https://zhenyka9696/Classwork_22.02.2022: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/': Could not resolve host: zhenyka9696
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git remote set-url origin
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ https://KirillovItstep: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@github.com/KirillovItstep/sample3.gitgit remote set-url origin
+bash: https://KirillovItstep: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@github.com/KirillovItstep/sample3.gitgit: No such file or directory
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git remote set-url origin
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git remote ^C
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git remote set-url origin
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git remote set-url origin https://zhenyka9696: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@github.com/zhenyka9696/Classwork_22.02.2022.git
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git push --set-upstream origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 1.20 KiB | 1.21 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/zhenyka9696/Classwork_22.02.2022.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git commit -a -m "V2.0"
+[master 69933d1] V2.0
+ 1 file changed, 71 insertions(+), 131 deletions(-)
+ rewrite src/RunAll.java (93%)
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 1.37 KiB | 1.37 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/zhenyka9696/Classwork_22.02.2022.git
+   5c0d019..69933d1  master -> master
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git commit -a -m "V2.0"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+        Runn 22.02.2022.iml
+        out/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git push -u origign
+fatal: 'origign' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ git push -u origin
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$ ^C
+
+гк@PC12-CAB3 MINGW64 /d/гк/IDEA projects/Runn 22.02.2022 (master)
+$
