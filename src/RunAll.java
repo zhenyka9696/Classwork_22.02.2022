@@ -7,125 +7,65 @@ import java.awt.event.ActionListener;
 
 public class RunAll {
     public static void main(String[] args) {
-        JFrame frame = new JFrame();
+/*
+        1. Дано трехзначное число. Вывести число, полученное при прочтении исходного числа справа налево.
+        2. Дано трехзначное число. В нем зачеркнули первую слева цифру и приписали ее справа. Вывести полученное число.
+        3. Дано трехзначное число. Вывести число, полученное при переста¬новке цифр сотен и десятков исходного числа (например,
+        123 перейдет в 213).
+        4. Дано трехзначное число. Заменить в нем вторую цифру, если она является четной, на ближайшую большую нечетную цифру.
+        5. Дано трехзначное число. Изменить одну его цифру так, чтобы оно стало палиндромом (одинаково читается справа налево и слева направо).
+        6. Дано трехзначное число. Определить, является ли его число десятков четным числом.
+        7. Дано трехзначное число. Определить, является ли его число сотен нечетным числом.
+        8. Определить, является ли введенное трехзначное число палиндромом (одинаково читается справа налево и слева направо).
+        9. Дано целое число, большее 999. Найти цифру, соответствующую разряду сотен в записи этого числа.
+        10. Дано трехзначное число. Определить разность между этим числом и числом, записанным из тех же цифр, но в обратном порядке.
+        11. Дано трехзначное число. Округлить его до десятков.
+        12. Дано трехзначное число. Округлить его до сотен.
+         */
+        // boolean;byte;short;int;long;float;double;char
+        int number = 141;
+        int hundreds = number/100;
+        int tens = (number%100)/10;// JIB<RF
+        System.out.println(tens);
+        int units= (number%10)/100;
+        int number2=units*100+tens*10+hundreds;
+        System.out.println(number2);
+        System.out.println(units);
+        System.out.println(hundreds);
+        //
+        number=141;
+         hundreds = number/100;
+         tens = (number%100)/10;
+         units= number%10;
+        number2 = tens*100+units*10+hundreds;
+        System.out.println(number2);
 
-        frame.setTitle("Browser History");
-        frame.setSize(600, 400);
-        frame.setLocationRelativeTo(null);
-        frame.setResizable(false);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            if(tens%2==0)
+                tens++;
+        number2 = hundreds*100+tens*10+units;
+        System.out.println(number2);
+        /*
+        int x = ++tens; //tens++; x=tens;
+        x = tens++; //x=tens; tens++
+        tens++
+        ++tens
+        tens=5; x=5;
+        */
 
-        JMenuBar menuBar = new JMenuBar();
-        Font font = new Font("sans-serif", Font.PLAIN, 12);
-        UIManager.put("Menu.font", font);
-        UIManager.put("MenuItem.font", font);
+        boolean b =tens%2==0;
+        System.out.println(b);
+        if (tens%2==0)
+        tens++;
+        number2=hundreds*100+tens*10+units;
 
-        JMenu memuHelloCli = new JMenu("HelloCLI");
-        JMenuItem itemHelloEn = new JMenuItem("HelloEn");
-        JMenuItem itemHelloRu = new JMenuItem("HelloRu");
-        memuHelloCli.add(itemHelloEn);
-        memuHelloCli.add(itemHelloRu);
-        menuBar.add(memuHelloCli);
+    if (hundreds==units)
+        System.out.println("palindrom");
+    else
+        System.out.println("not a palindrom");
 
-        JMenu menuHelloGui = new JMenu("HelloGUI");
-        JMenuItem itemHelloGuiEn = new JMenuItem("HelloEn");
-        JMenuItem itemHelloGuiRu = new JMenuItem("HelloRu");
-        menuHelloGui.add(itemHelloGuiEn);
-        menuHelloGui.add(itemHelloGuiRu);
-        menuBar.add(menuHelloGui);
-
-        JMenu menuAlgs = new JMenu("Algorithms");
-        JMenuItem itemAlgLinear = new JMenuItem("Linear");
-        JMenuItem itemAlgBranched = new JMenuItem("Branched");
-        JMenuItem itemAlgCyclic = new JMenuItem("Cyclic");
-        menuAlgs.add(itemAlgLinear);
-        menuAlgs.add(itemAlgBranched);
-        menuAlgs.add(itemAlgCyclic);
-        menuBar.add(menuAlgs);
-
-        JMenu menuExit = new JMenu("Exit");
-        menuBar.add(menuExit);
-
-        itemHelloEn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Hello, world!");
-            }
-        });
-
-        itemHelloRu.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Привет, мир!");
-            }
-        });
-
-        itemHelloGuiEn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(null, "Hello, world!");
-            }
-        });
-
-        itemHelloGuiRu.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(null, "Привет, мир!");
-            }
-        });
-
-        itemAlgLinear.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent actionEvent) {
-                //Linear algorithm
-                System.out.println("Wake up");
-                System.out.println("Get up");
-                System.out.println("Make the bed");
-                System.out.println("Get dressed");
-                System.out.println("Drink a glass of water");
-                System.out.println("Brush teeth");
-            }
-        });
-
-        itemAlgBranched.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent actionEvent) {
-                //Branched algorithm
-                int points = 70;
-                if (points<30)
-                    System.out.println("Your mark is 3");
-                else if (points<50)
-                    System.out.println("Your mark is 4");
-                else
-                    System.out.println("Your mark is 5");
-            }
-        });
-
-        itemAlgCyclic.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent actionEvent) {
-                //Cyclic algorithm
-                for (int i=0; i<10; i++){
-                    System.out.print("Fall forward, ");
-                    System.out.print("Push up, ");
-                    System.out.println("Stand up");
-                }
-            }
-        });
-
-        menuExit.addMenuListener(new MenuListener() {
-
-            @Override
-            public void menuSelected(MenuEvent e) {
-                System.exit(0);
-            }
-
-            @Override
-            public void menuDeselected(MenuEvent e) {
-
-            }
-
-            @Override
-            public void menuCanceled(MenuEvent e) {
-
-            }
-        });
-
-        frame.setJMenuBar(menuBar);
-        frame.setVisible(true);
+    String s=hundreds==units?"palindrom":"not a palindrom";
+        System.out.println(s);
+//0000000
     }
-    }
+}
 
